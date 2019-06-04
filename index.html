@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="https://app.ohmnilabs.com/api/Ohmni.js"></script>
+  <script src="https://telebots-dev.ohmnilabs.com:8080/api/Ohmni.js"></script>
+      <script>
+        (function(t,u,r,b,o,s){
+          o=document.createElement(u);
+          o.setAttribute('data-turbojs', b);
+          o.async=1;o.src=r;
+          s=t.getElementsByTagName(u)[0];
+          s.parentNode.insertBefore(o, null);
+        })(document, 'script',
+          "//dooe3vx785zy.cloudfront.net/assets/turbojs/8/turbo.js?version=8",
+          'https://cdn.getforge.com/overlay-html.getforge.io/1523250379/_squish.js');
+      </script>
 
   <script>
     function setRedLight() {
@@ -28,11 +39,13 @@
   </script>
 </head>
 <body>
-  <button type="button" data-external="true" class="button" style="padding:30px;margin:20px" onclick="setRedLight();">Set RED!</button><br>
-  <button type="button" data-external="true" class="button" style="padding:30px;margin:20px" onclick="setBlueLight();">Set BLUE!</button><br>
-  <button type="button" data-external="true" class="button" style="padding:30px;margin:20px" onclick="setGreenLight();">Set GREEN!</button><br>
-  <button type="button" data-external="true" class="button" style="padding:30px;margin:20px" onclick="move();">Move!</button><br>
-  <button type="button" data-external="true" class="button" style="padding:30px;margin:20px" onclick="setNeckPosition();">Set Neck Position!</button><br>
-  <button type="button" data-external="true" class="button" style="padding:30px;margin:20px" onclick="setNeckTorqueEnabled();">Enable Neck Torque</button><br>
-  <button type="button" data-external="true" class="button" style="padding:30px;margin:20px" onclick="setNeckTorqueDisabled();">Disable Neck Torque</button><br>
+  <button type="button" class="button" style="padding:30px;margin:20px" onclick="setRedLight();">Set RED!</button><br>
+  <button type="button" class="button" style="padding:30px;margin:20px" onclick="setBlueLight();">Set BLUE!</button><br>
+  <button type="button" class="button" style="padding:30px;margin:20px" onclick="setGreenLight();">Set GREEN!</button><br>
+  <button type="button" class="button" style="padding:30px;margin:20px" onclick="move();">Move!</button><br>
+  <button type="button" class="button" style="padding:30px;margin:20px" onclick="setNeckPosition();">Set Neck Position!</button><br>
+  <button type="button" class="button" style="padding:30px;margin:20px" onclick="setNeckTorqueEnabled();">Enable Neck Torque</button><br>
+  <button type="button" class="button" style="padding:30px;margin:20px" onclick="setNeckTorqueDisabled();">Disable Neck Torque</button><br>
+
+<meta name='forge-tag' value='forge-token:1523250379' /></body>
 </html>
