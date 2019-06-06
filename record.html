@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script src="https://app.ohmnilabs.com/api/Ohmni-incall.js"></script>   
+</head>  
+<button onclick="tiltdown()" data-external="true" style="height:100px; width:100px;">Tilt neck down</button><br><br><br><br><br> <script> function tiltdown() { Ohmni.setNeckPosition(650, 100); } </script><br>
+<button onclick="circlearound()" data-external="true" style="height:100px; width:100px;">circlearound</button> <script> function circlearound() { Ohmni.move(-500, 500, 2000);  } </script> 
+<button onclick="say()" data-external="true" style="height:100px; width:100px;">hehehehe</button> <script> function say() { Ohmni.setSpeechLanguage("zh-TW"); Ohmni.say("请不要推我");Ohmni.move(-500, 500, 2000);    } </script> 
+</html>
