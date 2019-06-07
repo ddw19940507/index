@@ -1,19 +1,21 @@
 
-
 <!DOCTYPE html>
 <html>
 <head>
-   <script src="https://app.ohmnilabs.com/api/Ohmni-standalone.js"></script>
+<script src="https://app.ohmnilabs.com/api/Ohmni-standalone.js"></script>
    
 </head>  
-<img id="ttt" src="https://cdn10.bigcommerce.com/s-npe4l/products/1157/images/1335/B-MZ-SMSHD---HIGH__85441.1477602947.1280.1280.jpg" alt="Smiley face" width="1200" height="1200" >
-<script> function myFunction(){Ohmni.setSpeechLanguage("zh-TW"); Ohmni.say("猛龙总冠军，四比一带走勇士耶");
+<img id="ttt" src="https://cdn10.bigcommerce.com/s-npe4l/products/1157/images/1335/B-MZ-SMSHD---HIGH__85441.1477602947.1280.1280.jpg" alt="Smiley face" width="1000" height="1000" >
+<script> function firstaction(){Ohmni.setSpeechLanguage("zh-TW"); 
+                               Ohmni.say("猛龙总冠军，四比一带走勇士耶");
                                Ohmni.move(500, -500, 2000);Ohmni.setNeckTorqueEnabled(1);
                                Ohmni.setNeckPosition(350,100); 
-                               Ohmni.setNeckPosition(650,100);
-                               Ohmni.say("我说完了 谢谢");
+                               Ohmni.setNeckPosition(650,100);                              
+                               } 
+         function secondaction(){Ohmni.say("我说完了 谢谢");
                                Ohmni.say("去睡觉了");
-                               document.getElementById('ttt').src='https://previews.123rf.com/images/awan62/awan621511/awan62151100017/48995841-happy-smiley-emoticon-face-on-white-background.jpg'} 
-   setTimeout(myFunction, 5000)</script>
+                               document.getElementById('ttt').src='https://previews.123rf.com/images/awan62/awan621511/awan62151100017/48995841-happy-smiley-emoticon-face-on-white-background.jpg'}
+   setTimeout(firstaction, 5000)  
+   setTimeout(secondaction, 10000)</script>
 </html>
 
