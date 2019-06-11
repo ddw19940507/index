@@ -3,16 +3,24 @@
 <head>
 <script src="https://app.ohmnilabs.com/api/Ohmni-standalone.js"></script>
 </head>  
-<img id="ttt" src="https://cdn10.bigcommerce.com/s-npe4l/products/1157/images/1335/B-MZ-SMSHD---HIGH__85441.1477602947.1280.1280.jpg" alt="Smiley face" width="1000" height="1000" >
+<img id="ttt" src="https://cdn10.bigcommerce.com/s-npe4l/products/1157/images/1335/B-MZ-SMSHD---HIGH__85441.1477602947.1280.1280.jpg" alt="Smiley face" width="1280" height="800" >
 <script> 
-  function SpeakAndAction(sentence){
+  function SpeakAndAction(firstsentence,secondsentence,neck){
                            Ohmni.move(500, -500, 2000);
                            Ohmni.setSpeechLanguage("zh-TW"); 
-                           Ohmni.say(sentence);
-                           Ohmni.setNeckTorqueEnabled(1);  
-                           Ohmni.setNeckPosition(650, 100);
+                           Ohmni.say(firstsentence);
+                           Ohmni.setSpeechLanguage("en-US");
+                           Ohmni.say(secondsentence);
+                           Ohmni.setNeckTorqueEnabled(1);
+                           if (neck==1) {
+                            Ohmni.setNeckPosition(650, 100);
+                           }
+                           else{ 
+                             Ohmni.setNeckPosition(350, 100);
+                               }
+                      
                         
                           }
-   setTimeout(SpeakAndAction("很高兴能与大家见面 nice to meet you"), 3000);
+   setTimeout(SpeakAndAction("很高兴能与大家见面","nice to meet you",1), 3000);
  </script>
 </html>
