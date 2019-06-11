@@ -3,26 +3,17 @@
 <html>
 <head>
 <script src="https://app.ohmnilabs.com/api/Ohmni-standalone.js"></script>
-<script>function setURL(url){Ohmni.showPageOnBot(url);}</script>   
 </head>  
 <img id="ttt" src="https://cdn10.bigcommerce.com/s-npe4l/products/1157/images/1335/B-MZ-SMSHD---HIGH__85441.1477602947.1280.1280.jpg" alt="Smiley face" width="500" height="500" >
 <script> 
-  function jumptoanother(){Ohmni.move(-500, -500, 2000);
+  function SpeakAndAction(sentence){
+                           Ohmni.move(-500, -500, 2000);
                            Ohmni.setSpeechLanguage("zh-TW"); 
-                           Ohmni.say("我只有百分之九十九的电了");
+                           Ohmni.say(sentence);
+                           Ohmni.setNeckTorqueEnabled(1);  
+                           Ohmni.setNeckPosition(650, 100);
+                           Ohmni.setNeckPosition(350,100);
                           }
-   setTimeout(jumptoanother, 5000);/*function firstaction(){Ohmni.setSpeechLanguage("zh-TW"); 
-                               Ohmni.say("猛龙总冠军，四比一带走勇士耶");
-                               Ohmni.move(-500, -500, 2000);
-                               Ohmni.setNeckTorqueEnabled(1);
-                               Ohmni.setNeckPosition(350,100); 
-                               Ohmni.setNeckPosition(650,100);                              
-                               } 
-         function secondaction(){Ohmni.say("我说完了 谢谢");
-                               Ohmni.say("去睡觉了");
-                               document.getElementById('ttt').src='https://previews.123rf.com/images/awan62/awan621511/awan62151100017/48995841-happy-smiley-emoticon-face-on-white-background.jpg'}
-   setTimeout(firstaction, 5000);
-   setTimeout(secondaction,10000);
-   Ohmni.say("我废话真多");*/</script>
+   setTimeout(SpeakAndAction("我只有百分之九十九的电了"), 3000);</script>
 </html>
 
