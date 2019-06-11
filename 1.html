@@ -3,10 +3,10 @@
 <head>
 <script src="https://app.ohmnilabs.com/api/Ohmni-standalone.js"></script>
 </head>  
-<img id="ttt" src="https://cdn10.bigcommerce.com/s-npe4l/products/1157/images/1335/B-MZ-SMSHD---HIGH__85441.1477602947.1280.1280.jpg" alt="Smiley face" width="1280" height="800" >
+<img id="ttt" src="https://cdn10.bigcommerce.com/s-npe4l/products/1157/images/1335/B-MZ-SMSHD---HIGH__85441.1477602947.1280.1280.jpg" alt="Smiley face" width="1280" height="1000" >
 <script> 
-  function SpeakAndAction(firstsentence,secondsentence,neck,move){
-                            if (move==1) {
+  function SpeakAndAction(firstsentence,secondsentence/*,neck,move*/){
+                           /* if (move==1) {
                            Ohmni.move(500, -500, 1000);
                             }
                            else{
@@ -22,10 +22,13 @@
                            }
                            else{ 
                              Ohmni.setNeckPosition(350, 100);
-                               }
+                               }*/
+    console.log(firstsentence);
+    console.log(secondsentence);
   }                     
   </script>
   <script> 
+    console.log("nimazhale");
    var storych =["很高兴能与大家见面","今天我讲司马光砸缸","从前有个人叫司马光","他很喜欢砸缸"]; 
    var storyen =["nice to meet you","sima GUANG ZA GANG","long long a ago there is a sima guang","he likes broke things"];  
    var x=0;
@@ -39,7 +42,7 @@
      }
 
 function setDelay(v) {
-  setTimeout(function(){SpeakAndAction(storych[v],storyen[v],1,1);}, 6000*i); 
+  setTimeout(function(){SpeakAndAction(storych[v],storyen[v];}, 3000); 
    }
 
    /*setTimeout(function(){SpeakAndAction("很高兴能与大家见面","nice to meet you",1,1);}, 3000);
