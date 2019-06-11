@@ -3,9 +3,9 @@
 <head>
 <script src="https://app.ohmnilabs.com/api/Ohmni-standalone.js"></script>
 </head>  
-<img id="ttt" src="https://cdn10.bigcommerce.com/s-npe4l/products/1157/images/1335/B-MZ-SMSHD---HIGH__85441.1477602947.1280.1280.jpg" alt="Smiley face" width="1280" height="1000" >
+<img id="ttt" src="https://cdn10.bigcommerce.com/s-npe4l/products/1157/images/1335/B-MZ-SMSHD---HIGH__85441.1477602947.1280.1280.jpg" alt="Smiley face" width="1280" height="800" >
 <script> 
-  function SpeakAndAction(firstsentence,secondsentence,neck,move,xs,ts){
+  function SpeakAndAction(firstsentence,secondsentence,neck,move){
                             if (move==1) {
                            Ohmni.move(500, -500, 1000);
                             }
@@ -23,15 +23,7 @@
                            else{ 
                              Ohmni.setNeckPosition(350, 100);
                                }
-                             if (xs==1) {
-                            xs=0;
-                           }
-                           else{ 
-                             xs=1;
-                               }
-                          
-                             ts=ts+6000;
-                          }
+                         
   </script>
   <script> 
    var storych =["很高兴能与大家见面","今天我讲司马光砸缸","从前有个人叫司马光","他很喜欢砸缸"]; 
@@ -39,9 +31,17 @@
    var x=0;
    var t=3000;
    /* SpeakAndAction(storych[1],storyen[1],x,x);*/
-   for(let i = 0 ; i < arr.length; i++){
+   /*for(let i = 0 ; i < arr.length; i++){
       setTimeout(function(){SpeakAndAction(storych[i],storyen[i],x,x,x,t);}, t); 
+   }*/
+    for (i = 0 ; i < arr.length; i++) {
+         setDelay(i);
+     }
+
+function setDelay(i) {
+  setTimeout(function(){SpeakAndAction(storych[i],storyen[i],x,x);}, 6000); 
    }
+
    /*setTimeout(function(){SpeakAndAction("很高兴能与大家见面","nice to meet you",1,1);}, 3000);
    setTimeout(function(){SpeakAndAction("今天我讲司马光砸缸","sima GUANG ZA GANG",0,0);}, 6000);
    setTimeout(function(){SpeakAndAction("从前有个人叫司马光","long long a ago there is a sima guang",1,1);}, 10000);
