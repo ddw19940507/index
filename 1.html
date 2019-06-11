@@ -5,8 +5,13 @@
 </head>  
 <img id="ttt" src="https://cdn10.bigcommerce.com/s-npe4l/products/1157/images/1335/B-MZ-SMSHD---HIGH__85441.1477602947.1280.1280.jpg" alt="Smiley face" width="1280" height="1000" >
 <script> 
-  function SpeakAndAction(firstsentence,secondsentence,neck){
-                           Ohmni.move(500, -500, 2000);
+  function SpeakAndAction(firstsentence,secondsentence,neck,move){
+                            if (move==1) {
+                           Ohmni.move(500, -500, 1000);
+                            }
+                           else{
+                            Ohmni.move(-500, 500, 1000);  
+                              }
                            Ohmni.setSpeechLanguage("zh-TW"); 
                            Ohmni.say(firstsentence);
                            Ohmni.setSpeechLanguage("en-US");
@@ -21,7 +26,7 @@
                       
                         
                           }
-   setTimeout(SpeakAndAction("很高兴能与大家见面","nice to meet you",1), 3000);
-   setTimeout(SpeakAndAction("我要点头了","Knock my head",0), 10000);
+   setTimeout(SpeakAndAction("很高兴能与大家见面","nice to meet you",1,1), 3000);
+   setTimeout(SpeakAndAction("我要点头了","Knock my head",0,0), 10000);
  </script>
 </html>
