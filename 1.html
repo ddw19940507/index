@@ -3,7 +3,7 @@
 <head>
 <script src="https://app.ohmnilabs.com/api/Ohmni-standalone.js"></script>
 </head>  
-<img id="ttt" src="https://cdn10.bigcommerce.com/s-npe4l/products/1157/images/1335/B-MZ-SMSHD---HIGH__85441.1477602947.1280.1280.jpg" alt="Smiley face" width="1280" height="800" >
+<img id="ttt" src="https://cdn10.bigcommerce.com/s-npe4l/products/1157/images/1335/B-MZ-SMSHD---HIGH__85441.1477602947.1280.1280.jpg" alt="Smiley face" width="1280" height="1000" >
 <script> 
   function SpeakAndAction(firstsentence,secondsentence,neck,move,xs,ts){
                             if (move==1) {
@@ -39,7 +39,7 @@
    var x=0;
    var t=3000;
    /* SpeakAndAction(storych[1],storyen[1],x,x);*/
-   for(var i = 0 ; i < arr.length; i++){
+   for(let i = 0 ; i < arr.length; i++){
       setTimeout(function(){SpeakAndAction(storych[i],storyen[i],x,x,x,t);}, t); 
    }
    /*setTimeout(function(){SpeakAndAction("很高兴能与大家见面","nice to meet you",1,1);}, 3000);
