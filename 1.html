@@ -3,7 +3,7 @@
 <head>
 <script src="https://app.ohmnilabs.com/api/Ohmni-standalone.js"></script>
 </head>  
-<img id="ttt" src="https://cdn10.bigcommerce.com/s-npe4l/products/1157/images/1335/B-MZ-SMSHD---HIGH__85441.1477602947.1280.1280.jpg" alt="Smiley face" width="1280" height="800" >
+<img id="ttt" src="https://cdn10.bigcommerce.com/s-npe4l/products/1157/images/1335/B-MZ-SMSHD---HIGH__85441.1477602947.1280.1280.jpg" alt="Smiley face" width="1280" height="1000" >
 <script> 
   function SpeakAndAction(firstsentence,secondsentence,neck,move){
                             if (move==1) {
@@ -30,8 +30,8 @@
    var storyen =["nice to meet you","sima GUANG ZA GANG","long long a ago there is a sima guang","he likes broke things"];  
    var x=0;
    var t=3000;
-    SpeakAndAction(storych[1],storyen[1],x,x);
-  /* for(var i = 0 ; i < arr.length; i++){
+   /* SpeakAndAction(storych[1],storyen[1],x,x);*/
+   for(var i = 0 ; i < arr.length; i++){
       setTimeout(function(){SpeakAndAction(storych[i],storyen[i],x,x);}, t); 
       if (x==1) {
                             x=0;
@@ -41,7 +41,7 @@
                                }
                           }
     t=t+6000;
-   }*/
+   }
    /*setTimeout(function(){SpeakAndAction("很高兴能与大家见面","nice to meet you",1,1);}, 3000);
    setTimeout(function(){SpeakAndAction("今天我讲司马光砸缸","sima GUANG ZA GANG",0,0);}, 6000);
    setTimeout(function(){SpeakAndAction("从前有个人叫司马光","long long a ago there is a sima guang",1,1);}, 10000);
