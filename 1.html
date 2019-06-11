@@ -3,7 +3,7 @@
 <head>
 <script src="https://app.ohmnilabs.com/api/Ohmni-standalone.js"></script>
 </head>  
-<img id="ttt" src="https://cdn10.bigcommerce.com/s-npe4l/products/1157/images/1335/B-MZ-SMSHD---HIGH__85441.1477602947.1280.1280.jpg" alt="Smiley face" width="1280" height="1000" >
+<img id="ttt" src="https://cdn10.bigcommerce.com/s-npe4l/products/1157/images/1335/B-MZ-SMSHD---HIGH__85441.1477602947.1280.1280.jpg" alt="Smiley face" width="1280" height="800" >
 <script> 
   function SpeakAndAction(firstsentence,secondsentence,neck,move){
                             if (move==1) {
@@ -26,11 +26,27 @@
                           }
   </script>
   <script> 
-   setTimeout(function(){SpeakAndAction("很高兴能与大家见面","nice to meet you",1,1);}, 3000);
+   var storych =["很高兴能与大家见面","今天我讲司马光砸缸","从前有个人叫司马光","他很喜欢砸缸"]; 
+   var storyen =["nice to meet you","sima GUANG ZA GANG","long long a ago there is a sima guang","he likes broke things"];  
+   var x=0;
+   var t=3000
+   for(var i = 0 ; i < arr.length; i++){
+      setTimeout(function(){SpeakAndAction(storych[i],storyen[i],x,x);}, t); 
+      if (x==1) {
+                            x=0;
+                           }
+                           else{ 
+                             x=1;
+                               }
+                          }
+    t=t+6000;
+   }
+   /*setTimeout(function(){SpeakAndAction("很高兴能与大家见面","nice to meet you",1,1);}, 3000);
    setTimeout(function(){SpeakAndAction("今天我讲司马光砸缸","sima GUANG ZA GANG",0,0);}, 6000);
    setTimeout(function(){SpeakAndAction("从前有个人叫司马光","long long a ago there is a sima guang",1,1);}, 10000);
    setTimeout(function(){SpeakAndAction("他很喜欢砸缸","he likes broke things",0,0);}, 15000);
-   setTimeout(function(){SpeakAndAction("后来他被警察叔叔捉走了","Then he was caught by police",0,0);}, 19000);
-
+   setTimeout(function(){SpeakAndAction("后来他被警察叔叔捉走了","Then he was caught by police",1,1);}, 19000);
+   setTimeout(function(){SpeakAndAction("今天的故事就讲到这里了","This is the end",0,0);}, 25000);
+   setTimeout(function(){SpeakAndAction("别忘给我点赞哟","ZAN me",1,1);}, 31000);*/
  </script>
 </html>
