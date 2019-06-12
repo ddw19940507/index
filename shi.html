@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://app.ohmnilabs.com/api/Ohmni-standalone.js"></script>
+</head>  
+<img id="ttt" src="https://cdn10.bigcommerce.com/s-npe4l/products/1157/images/1335/B-MZ-SMSHD---HIGH__85441.1477602947.1280.1280.jpg" alt="Smiley face" width="1280" height="1000" >
+<script> 
+  function SpeakAndAction(firstsentence,xs){
+                       
+                          /*if (xs%2==0 || xs==0) {
+                           Ohmni.move(500, -500, 1000);
+                            }
+                           else{
+                            Ohmni.move(-500, 500, 1000);  
+                              }*/
+                           Ohmni.setSpeechLanguage("zh-TW"); 
+                           Ohmni.say(firstsentence);
+                           Ohmni.setNeckTorqueEnabled(1);
+                           if (xs%2==0 || xs==0) {
+                            Ohmni.setNeckPosition(650, 100);
+                           }
+                           else{ 
+                             Ohmni.setNeckPosition(350, 100);
+                               }
+    
+ 
+  }                     
+  </script>
+  <script> 
+   var storych =["金樽清酒斗十千 玉盘珍羞直万钱
+　　停杯投箸不能食 拔剑四顾心茫然
+　　欲渡黄河冰塞川 将登太行雪满山。
+　　闲来垂钓碧溪上 忽复乘舟梦日边
+　　行路难 行路难 多岐路 今安在
+　　长风破浪会有时 直挂云帆济沧海"]
+  
+   var x=0;
+    for (i = 0 ; i < storych.length; i++) {
+         setDelay(i);
+     }
+function setDelay(v) {
+  setTimeout(function(){SpeakAndAction(storych[v],v);}, 4500*i); 
+   }
+ </script>
+</html>
