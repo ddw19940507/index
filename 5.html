@@ -7,7 +7,7 @@
 <script> 
  /* function tokenization() {*/
             
-            var value = "现在学院和 AI 聘进行深度合作，给同学们提供________的服务，其中的特色项目是 Career VIP项目，在这个项目中，同学们可以找到工作再付费，并且在项目中，会使用人工智能和大数据给同学们进行岗位匹配和竞争力分析，帮助同学们精准定位，并且求职辅导老师会在过程中全程辅导，感兴趣的同学可以通过屏幕下方的联系方式和求职辅导老师取得联系。（念一遍联系方式）";
+            var value = "现在学院和 AI 聘进行深度合作，给同学们提供各种神秘莫测的服务，其中的特色项目是 VIP 项目，在这个项目中，同学们可以找到工作再付费，并且在项目中，会使用人工智能和大数据给同学们进行岗位匹配和竞争力分析，帮助同学们精准定位，并且求职辅导老师会在过程中全程辅导，感兴趣的同学可以通过屏幕下方的联系方式和求职辅导老师取得联系。洞拐洞拐洞洞拐";
             /*var len = value.length / 11;
             var index = 0;
             var list = [];
@@ -40,13 +40,13 @@
   </script>
   <script> 
    Ohmni.setSpeechLanguage("zh-CN")
- //Ohmni.say(value);
+   Ohmni.say(value);
      	  
    //var storych = tokenization();
-    for (i = 0 ; i < 10; i++) {
+    for (i = 0 ; i < 25; i++) {
          setDelay(i);
      }
-    Ohmni.say(value);
+
      
 function setDelay(v) {
   setTimeout(function(){SpeakAndAction(v);}, 2000*i); 
