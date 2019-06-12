@@ -8,10 +8,10 @@
   function SpeakAndAction(firstsentence,secondsentence,xs){
                        
                           if (xs%2==0 || xs==0) {
-                           Ohmni.move(500, -500, 1000);
+                           Ohmni.move(-500, -500, 1000);
                             }
                            else{
-                            Ohmni.move(-500, 500, 1000);  
+                            Ohmni.move(500, 500, 1000);  
                               }
                            Ohmni.setSpeechLanguage("zh-TW"); 
                            Ohmni.say(firstsentence);
