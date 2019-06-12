@@ -1,4 +1,4 @@
-<script type="text/javascript" language="javascript"> 
+/*<script type="text/javascript" language="javascript"> 
 //读文件 
 function readFile(filename){ 
 	var fso = new ActiveXObject("Scripting.FileSystemObject"); 
@@ -20,7 +20,7 @@ function writeFile(filename,filecontent){
 	alert('write ok'); 
 } 
 </script> 
-
+*/
 <html> 
 	<input type="text" id="in" name="in" /> 
 	<input type="button" value="Write!" onclick="writeFile('aaa.txt',document.getElementById('in').value);"/>
@@ -31,3 +31,14 @@ function writeFile(filename,filecontent){
 	<textarea id="show" name="show" cols="50" rows="8" > 
 	</textarea> 
 </html>
+<script> 
+// Requiring fs module in which  
+// readFile function is defined. 
+const fs = require('fs') 
+  
+fs.readFile('aaa.txt', (err, data) => { 
+    if (err) throw err; 
+  
+    console.log(data.toString()); 
+}) 
+</script> 
