@@ -1,26 +1,4 @@
-/*<script type="text/javascript" language="javascript"> 
-//读文件 
-function readFile(filename){ 
-	var fso = new ActiveXObject("Scripting.FileSystemObject"); 
-	var f = fso.OpenTextFile(filename,1); 
-	var s = ""; 
-	while (!f.AtEndOfStream) 
-		s += f.ReadLine()+"/n"; 
-	f.Close(); 
-	return s; 
-} 
 
-//写文件 
-function writeFile(filename,filecontent){ 
-    var fso, f, s ; 
-    fso = new ActiveXObject("Scripting.FileSystemObject");    
-    f = fso.OpenTextFile(filename,8,true); 
-    f.WriteLine(filecontent);   
-    f.Close(); 
-	alert('write ok'); 
-} 
-</script> 
-*/
 <html> 
 	<input type="text" id="in" name="in" /> 
 	<input type="button" value="Write!" onclick="writeFile('aaa.txt',document.getElementById('in').value);"/>
@@ -32,13 +10,18 @@ function writeFile(filename,filecontent){
 	</textarea> 
 </html>
 <script> 
-// Requiring fs module in which  
-// readFile function is defined. 
-const fs = require('fs') 
-  
-fs.readFile('aaa.txt', (err, data) => { 
-    if (err) throw err; 
-  
-    console.log(data.toString()); 
-}) 
+ <script>
+        window.onload = function () {
+            debugger;
+            var value = "aaabbbcccdddeeefffggghhhiiijjj";
+            var len = value.length / 3;
+            var index = 0;
+            var list = [];
+            for (var i = 1; i < len + 1; i++) {
+                var res = value.substr(index, 3);
+                list.push(res);
+                index = index + 3;
+            }
+        };
+
 </script> 
