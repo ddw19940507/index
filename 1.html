@@ -5,8 +5,9 @@
 </head>  
 <img id="ttt" src="https://cdn10.bigcommerce.com/s-npe4l/products/1157/images/1335/B-MZ-SMSHD---HIGH__85441.1477602947.1280.1280.jpg" alt="Smiley face" width="1280" height="1000" >
 <script> 
-  function SpeakAndAction(firstsentence,secondsentence,neck,move,xs){
-                           if (move==1) {
+  function SpeakAndAction(firstsentence,secondsentence,xs){
+                       
+                          if (xs%2==0 || xs==0) {
                            Ohmni.move(500, -500, 1000);
                             }
                            else{
@@ -17,19 +18,14 @@
                            Ohmni.setSpeechLanguage("en-US");
                            Ohmni.say(secondsentence);
                            Ohmni.setNeckTorqueEnabled(1);
-                           if (neck==1) {
+                           if (xs%2==0 || xs==0) {
                             Ohmni.setNeckPosition(650, 100);
                            }
                            else{ 
                              Ohmni.setNeckPosition(350, 100);
                                }
     
-                            if (xs==1) {
-                            xs=0;
-                           }
-                           else{ 
-                             xs=1;
-                               }
+ 
 
   }                     
   </script>
@@ -46,7 +42,7 @@
      }
 
 function setDelay(v) {
-  setTimeout(function(){SpeakAndAction(storych[v],storyen[v],x,x,x);}, 6000*i); 
+  setTimeout(function(){SpeakAndAction(storych[v],storyen[v],v);}, 6000*i); 
    }
 
    /*setTimeout(function(){SpeakAndAction("很高兴能与大家见面","nice to meet you",1,1);}, 3000);
