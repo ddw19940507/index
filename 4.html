@@ -8,13 +8,13 @@
   function tokenization() {
             
             var value = "今天是个好日子，心想的事儿都能成，明天也是好日子，啊哈哈哈哈哈";
-            var len = value.length / 9;
+            var len = value.length / 6;
             var index = 0;
             var list = [];
             for (var i = 1; i < len + 1; i++) {
-                var res = value.substr(index, 3);
+                var res = value.substr(index, 6);
                 list.push(res);
-                index = index + 3;
+                index = index + 6;
             }
 		     return list;
         };
@@ -47,7 +47,7 @@
          setDelay(i);
      }
 function setDelay(v) {
-  setTimeout(function(){SpeakAndAction(storych[v],v);}, 4000*i); 
+  setTimeout(function(){SpeakAndAction(storych[v],v);}, 3000*i); 
    }
  </script>
 </html>
