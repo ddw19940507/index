@@ -7,14 +7,14 @@
 <script> 
   function tokenization() {
             
-            var value = "今天是个好日子，心想的事儿都能成，明天也是好日子，啊哈哈哈哈哈";
-            var len = value.length / 6;
+            var value = "同学们大家好，在咱们正式开始之前先和同学们确认一下声音和画面，如果大家现在可以听到我的声音，看到正在分享的 PPT，请在 QA 或者 Chat 中帮忙回复六六六确认一下，谢谢大家的反馈。";
+            var len = value.length / 8;
             var index = 0;
             var list = [];
             for (var i = 1; i < len + 1; i++) {
-                var res = value.substr(index, 6);
+                var res = value.substr(index, 8);
                 list.push(res);
-                index = index + 6;
+                index = index + 8;
             }
 		     return list;
         };
@@ -47,7 +47,7 @@
          setDelay(i);
      }
 function setDelay(v) {
-  setTimeout(function(){SpeakAndAction(storych[v],v);}, 1800*i); 
+  setTimeout(function(){SpeakAndAction(storych[v],v);}, 2000*i); 
    }
  </script>
 </html>
