@@ -30,13 +30,10 @@
   }                     
   </script>
   <script> 
-   var storych =["很高兴能与大家见面","今天我讲司马光砸缸","从前有个人叫司马光","他很喜欢砸缸"]; 
-   var storyen =["nice to meet you","sima GUANG ZA GANG","long long a ago there is a sima guang","he likes broke things"];  
+   var storych =["很高兴能与大家见面","今天我讲司马光砸缸","从前有个人叫司马光","他很喜欢砸缸","后来他被警察叔叔捉走了","今天的故事就讲到这里了","别忘给我点赞哟"]; 
+   var storyen =["nice to meet you","sima GUANG ZA GANG","long long a ago there is a sima guang","he likes broke things","Then he was caught by police","This is the end","ZAN me"];  
    var x=0;
-  /* SpeakAndAction(storych[0],storyen[0],x,0);*/
-   /*for(let i = 0 ; i < arr.length; i++){
-      setTimeout(function(){SpeakAndAction(storych[i],storyen[i],x,x,x,t);}, t); 
-   }*/
+
     for (i = 0 ; i < storych.length; i++) {
          setDelay(i);
      }
@@ -45,12 +42,5 @@ function setDelay(v) {
   setTimeout(function(){SpeakAndAction(storych[v],storyen[v],v);}, 6000*i); 
    }
 
-   /*setTimeout(function(){SpeakAndAction("很高兴能与大家见面","nice to meet you",1,1);}, 3000);
-   setTimeout(function(){SpeakAndAction("今天我讲司马光砸缸","sima GUANG ZA GANG",0,0);}, 6000);
-   setTimeout(function(){SpeakAndAction("从前有个人叫司马光","long long a ago there is a sima guang",1,1);}, 10000);
-   setTimeout(function(){SpeakAndAction("他很喜欢砸缸","he likes broke things",0,0);}, 15000);
-   setTimeout(function(){SpeakAndAction("后来他被警察叔叔捉走了","Then he was caught by police",1,1);}, 19000);
-   setTimeout(function(){SpeakAndAction("今天的故事就讲到这里了","This is the end",0,0);}, 25000);
-   setTimeout(function(){SpeakAndAction("别忘给我点赞哟","ZAN me",1,1);}, 31000);*/
  </script>
 </html>
