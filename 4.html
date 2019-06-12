@@ -5,8 +5,23 @@
 </head>  
 <img id="ttt" src="https://cdn10.bigcommerce.com/s-npe4l/products/1157/images/1335/B-MZ-SMSHD---HIGH__85441.1477602947.1280.1280.jpg" alt="Smiley face" width="1280" height="1000" >
 <script> 
+  function tokenization() {
+            
+            var value = "今天是个好日子，心想的事儿都能成，明天也是好日子，啊哈哈哈哈哈";
+            var len = value.length / 9;
+            var index = 0;
+            var list = [];
+            for (var i = 1; i < len + 1; i++) {
+                var res = value.substr(index, 3);
+                list.push(res);
+                index = index + 3;
+            }
+		     return list;
+        };
+
   function SpeakAndAction(firstsentence,xs){
-                       
+
+
                           /*if (xs%2==0 || xs==0) {
                            Ohmni.move(500, -500, 1000);
                             }
@@ -27,7 +42,7 @@
   }                     
   </script>
   <script> 
-   var storych =["同学们大家好哈哈哈","在咱们正式开始之前先和同学们确认一下声音和画面","如果大家现在可以听到我的声音","看到正在分享的PPT","请在QA 或者 Chat 中帮忙回复666确认一下","谢谢大家的反馈。"]
+   var storych = tokenization();
     for (i = 0 ; i < storych.length; i++) {
          setDelay(i);
      }
