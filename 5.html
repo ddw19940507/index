@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://app.ohmnilabs.com/api/Ohmni-standalone.js"></script>
+</head>  
+<img id="ttt" src="https://cdn10.bigcommerce.com/s-npe4l/products/1157/images/1335/B-MZ-SMSHD---HIGH__85441.1477602947.1280.1280.jpg" alt="Smiley face" width="1280" height="1000" >
+<script> 
+  function tokenization() {
+            
+            var value = "再次欢迎来到本期由数据应用学院给大家带来的公开课。数据应用学院是北美第一家一站式专业人才输送机构，提供大数据和数据科学培训以及公司项目解决方案。咱们今天公开课的内容是如何战胜面试算法题，会由主讲嘉宾杰森老师为大家介绍一下 。";
+            var len = value.length / 8;
+            var index = 0;
+            var list = [];
+            for (var i = 1; i < len + 1; i++) {
+                var res = value.substr(index, 8);
+                list.push(res);
+                index = index + 8;
+            }
+		     return list;
+        };
+  function SpeakAndAction(firstsentence,xs){
+                          /*if (xs%2==0 || xs==0) {
+                           Ohmni.move(500, -500, 1000);
+                            }
+                           else{
+                            Ohmni.move(-500, 500, 1000);  
+                              }*/
+                           Ohmni.setSpeechLanguage("zh-TW"); 
+                           Ohmni.say(firstsentence);
+                           Ohmni.setNeckTorqueEnabled(1);
+                           if (xs%2==0 || xs==0) {
+                            Ohmni.setNeckPosition(650, 100);
+                           }
+                           else{ 
+                             Ohmni.setNeckPosition(350, 100);
+                               }
+    
+ 
+  }                     
+  </script>
+  <script> 
+   var storych = tokenization();
+    for (i = 0 ; i < storych.length; i++) {
+         setDelay(i);
+     }
+function setDelay(v) {
+  setTimeout(function(){SpeakAndAction(storych[v],v);}, 2000*i); 
+   }
+ </script>
+</html>
