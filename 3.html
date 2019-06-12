@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://app.ohmnilabs.com/api/Ohmni-standalone.js"></script>
+</head>  
+<img id="ttt" src="https://cdn10.bigcommerce.com/s-npe4l/products/1157/images/1335/B-MZ-SMSHD---HIGH__85441.1477602947.1280.1280.jpg" alt="Smiley face" width="1280" height="1000" >
+<script> 
+  function SpeakAndAction(firstsentence,xs){
+                       
+                          /*if (xs%2==0 || xs==0) {
+                           Ohmni.move(500, -500, 1000);
+                            }
+                           else{
+                            Ohmni.move(-500, 500, 1000);  
+                              }*/
+                           Ohmni.setSpeechLanguage("zh-TW"); 
+                           Ohmni.say(firstsentence);
+                           Ohmni.setNeckTorqueEnabled(1);
+                           if (xs%2==0 || xs==0) {
+                            Ohmni.setNeckPosition(650, 100);
+                           }
+                           else{ 
+                             Ohmni.setNeckPosition(350, 100);
+                               }
+    
+ 
+  }                     
+  </script>
+  <script> 
+   var storych =["好的同学们大家好", "欢迎来到今天的公开课","首先和同学们确认一下声音和画面","如果同学们能听到我的声音","或者看到我的画面的话","请回复一个一谢谢","我看到很多同学都回复了","谢谢大家的反馈"]; 
+  
+   var x=0;
+    for (i = 0 ; i < storych.length; i++) {
+         setDelay(i);
+     }
+function setDelay(v) {
+  setTimeout(function(){SpeakAndAction(storych[v],v);}, 4500*i); 
+   }
+ </script>
+</html>
