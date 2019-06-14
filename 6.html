@@ -24,8 +24,6 @@
            
            
   function SpeakAndAction(xs){
-
-         Ohmni.setNeckTorqueEnabled(1);
          if (xs%2==0 || xs==0) {
          Ohmni.setNeckPosition(550, 100);
          Ohmni.move(500, 500, 500);
@@ -39,6 +37,7 @@
   }                
   </script>
   <script> 
+   Ohmni.setNeckTorqueEnabled(1);
    Ohmni.setSpeechLanguage("zh-CN");
    Ohmni.say(first);
    Ohmni.say(second);
