@@ -37,7 +37,7 @@ var insertedvalue="到目前已经成功举办了十多场大会，一百多场�
   </script>
   <script> 
    Ohmni.setSpeechLanguage("zh-CN");
-   Ohmni.say(value);/*
+   Ohmni.say(value);
    Ohmni.say(secondvalue);    
    Ohmni.say(thirdvalue);
 
@@ -51,15 +51,15 @@ var insertedvalue="到目前已经成功举办了十多场大会，一百多场�
    Ohmni.say(englisonehvalue);
 
    Ohmni.say(seventhvalue);
-   Ohmni.say(eighthvalue);*/
+   Ohmni.say(eighthvalue);
    
  
-    for (i = 0 ; i < 19; i++) {
+    for (i = 0 ; i < 39; i++) {
          setDelay(i);
      }
      
 function setDelay(v) {
-  setTimeout(function(){SpeakAndAction(v);}, 10000*i); 
+  setTimeout(function(){SpeakAndAction(v);}, 5000*i); 
    }
  </script>
 </html>
