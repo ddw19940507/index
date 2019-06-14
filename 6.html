@@ -16,19 +16,21 @@ var insertedvalue="到目前已经成功举办了十多场大会，一百多场�
    var sixthvalue="学院在近期还会陆续给大家带来精彩的公开课，这里先给大家预告一下最近的两期，一个是美西时间6月十五日 周六上午十点，会有老师给大家介绍一下商业分析师技能图谱一个是美西时间六月十六日周日下午五点，会有老师给大家介绍面试环节中的";     
    var englishonevalue="背景介绍";
     var seventhvalue="感兴趣的同学可以扫描屏幕上的二维码进行报名，注册公开课。";
-   var eigthvalue="那我这边的介绍就到这里，接下来把时间留给今天的主讲嘉宾杰森老师，请老师为大家介绍一下今天的主要内容";
+   var eigthvalue="那我这边的介绍就到这里，接下来把时间留给今天的主讲嘉宾杰森老师，请老师为大家介绍一下今天的主要内容";*/
   function SpeakAndAction(xs){
 
          Ohmni.setNeckTorqueEnabled(1);
          if (xs%2==0 || xs==0) {
          Ohmni.setNeckPosition(550, 100);
+         Ohmni.move(500,-500,1000);
           }
          else{ 
          Ohmni.setNeckPosition(450, 100);
+         Ohmni.move(-500,500,1000);
           }
     
  
-  }       */              
+  }                
   </script>
   <script> 
  /*  Ohmni.setSpeechLanguage("zh-CN");
@@ -48,6 +50,7 @@ var insertedvalue="到目前已经成功举办了十多场大会，一百多场�
    Ohmni.say(seventhvalue);
    Ohmni.say(eighthvalue);
    //var storych = tokenization();*/
+ 
     for (i = 0 ; i < 100; i++) {
          setDelay(i);
      }
