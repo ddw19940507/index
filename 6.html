@@ -25,12 +25,12 @@
            
   function SpeakAndAction(xs){
          if (xs%2==0 || xs==0) {
-         Ohmni.setNeckPosition(550, 100);
-         Ohmni.move(300, 300, 500);
+         Ohmni.setNeckPosition(550, 700);
+         Ohmni.move(100, 100, 500);
           }
          else{ 
          Ohmni.setNeckPosition(450, 100);
-         Ohmni.move(-300, -300, 500);
+         Ohmni.move(-100, -100, 700);
           }
     
  
@@ -56,12 +56,12 @@
    Ohmni.say(eigthvalue);
    
  
-    for (i = 0 ; i < 70; i++) {
+    for (i = 0 ; i < 35; i++) {
          setDelay(i);
      }
      
 function setDelay(v) {
-  setTimeout(function(){SpeakAndAction(v);}, 5000*i); 
+  setTimeout(function(){SpeakAndAction(v);}, 10000*i); 
    }
  </script>
 </html>
