@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://app.ohmnilabs.com/api/Ohmni-standalone.js"></script>
+</head>  
+<img id="ttt" src="https://cdn10.bigcommerce.com/s-npe4l/products/1157/images/1335/B-MZ-SMSHD---HIGH__85441.1477602947.1280.1280.jpg" alt="Smiley face" width="1280" height="1000" >
+<script> 
+ /* function tokenization() {*/
+            
+            var first = "IDEAS started off as International Data Engineering and Science Association. We are a nonprofit organization devoted to promoting cutting-edge";
+            var second="technology by organizing international conferences, online workshops, and local meetups. We are at the forefront of innovation, entrepreneurship and career development. At “IDEAS”, we empower and nurture community growth by offering training resources, professional connections and job opportunities.";
+           
+  function SpeakAndAction(xs){
+                          /*if (xs%2==0 || xs==0) {
+                           Ohmni.move(500, -500, 1000);
+                            }
+                           else{
+                            Ohmni.move(-500, 500, 1000);  
+                              }*/
+                          /* Ohmni.setSpeechLanguage("zh-TW"); 
+                           Ohmni.say(firstsentence);
+                           Ohmni.setNeckTorqueEnabled(1);*/
+                           if (xs%2==0 || xs==0) {
+                            Ohmni.setNeckPosition(550, 100);
+                           }
+                           else{ 
+                             Ohmni.setNeckPosition(450, 100);
+                               }
+    
+ 
+  }                     
+  </script>
+  <script> 
+   Ohmni.setSpeechLanguage("en-US")
+   Ohmni.say(first);
+   Ohmni.say(second);
+     	  
+   //var storych = tokenization();
+    for (i = 0 ; i < 25; i++) {
+         setDelay(i);
+     }
+     
+function setDelay(v) {
+  setTimeout(function(){SpeakAndAction(v);}, 2000*i); 
+   }
+ </script>
+</html>
