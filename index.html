@@ -1,19 +1,125 @@
-
 <!DOCTYPE html>
-<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <head>
-<script src="https://app.ohmnilabs.com/api/Ohmni-standalone.js"></script>
-</head>  
-<img id="ttt" src="https://cdn10.bigcommerce.com/s-npe4l/products/1157/images/1335/B-MZ-SMSHD---HIGH__85441.1477602947.1280.1280.jpg" alt="Smiley face" width="500" height="500" >
-<script> 
-  function SpeakAndAction(sentence){
-                           Ohmni.move(-500, 500, 2000);
-                           Ohmni.setSpeechLanguage("zh-TW"); 
-                           Ohmni.say(sentence);
-                           Ohmni.setNeckTorqueEnabled(1);  
-                           Ohmni.setNeckPosition(350, 100);
-                           
-                          }
-   setTimeout(SpeakAndAction("我是今天大会的主持人olivia"), 3000);</script>
+  <h1 align="center"><font color="black">欢迎来到肉肉一家</font></h1>
+  <script src="https://app.ohmnilabs.com/api/Ohmni.js"></script>
+  <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/jquery.params.js"></script>
+  <script>
+   function MaiDan(){
+     var liangpi = document.getElementsByName('liangpi');
+     var mifen = document.getElementsByName('mifen');
+     var liangpiladu = document.getElementsByName('liangpiladu');
+     var mifenladu = document.getElementsByName('mifenladu');
+     var koushuiji = document.getElementsByName('koushuiji');
+     var koushuijiladu = document.getElementsByName('koushuijiladu');
+     var roujiamo = document.getElementsByName('roujiamo');
+     var roujiamozhonglei= document.getElementsByName('roujiamozhonglei');
+     var message="";
+     var total=0;
+     if (liangpi[0].checked && liangpiladu[0].checked) {
+        message=message+"一份小辣陕西凉皮,";
+        total=total+7.99;
+        }
+
+     if (liangpi[0].checked && liangpiladu[1].checked) {
+        message=message+"一份中辣陕西凉皮,";
+        total=total+7.99;
+        }
+
+     if (liangpi[0].checked && liangpiladu[2].checked) {
+        message=message+"一份变态辣陕西凉皮,";
+        total=total+7.99;
+        }
+
+     if (mifen[0].checked && mifenladu[0].checked) {
+        message=message+"一份小辣桂林米粉,";
+        total=total+9.99;
+        }
+
+     if (mifen[0].checked && mifenladu[1].checked) {
+        message=message+"一份中辣桂林米粉,";
+        total=total+9.99;
+        }
+
+     if (mifen[0].checked && mifenladu[2].checked) {
+        message=message+"一份变态辣桂林米粉,";
+        total=total+9.99;
+        }
+
+     if (koushuiji[0].checked && koushuijiladu[0].checked) {
+        message=message+"一份小辣口水鸡,";
+        total=total+6.99;
+        }
+
+     if (koushuiji[0].checked && koushuijiladu[1].checked) {
+        message=message+"一份中辣口水鸡,";
+        total=total+6.99;
+        }
+
+     if (koushuiji[0].checked && koushuijiladu[2].checked) {
+        message=message+"一份变态辣口水鸡,";
+        total=total+6.99;
+        }
+
+     if (roujiamo[0].checked && roujiamozhonglei[0].checked) {
+        message=message+"一份卤肉肉夹馍,";
+        total=total+3.99;
+        }
+
+     if (roujiamo[0].checked && roujiamozhonglei[1].checked) {
+        message=message+"一份牛肉肉夹馍,";
+        total=total+3.99;
+        }
+
+       document.getElementById('jieguo').innerHTML=message+"总共"+total+"美金";
+   }
+         $(function(){
+           jieguo = $("#jieguo").text();
+             
+
+            $("#btn").on("click",function(){
+               jump1();
+            });
+        });
+
+        function jump1(){
+            url = "2.html?jieguo="+jieguo;
+            window.location.href = url;
+        }
+
+  </script>
+</head>
+<body background="foodbck.png">
+<table align="center" border="1" rules=none frame="void" >
+<tr>
+<td align="center"><img src="liangpi.jpg" height="300" width="300"></td>
+<td align="center"><img src="guilinmf.jpg" height="300" width="300"></td>
+<td align="center"><img src="koushuiji.jpg" height="300" width="300"></td>
+<td align="center"><img src="roujiamo.jpg" height="300" width="300"></td>
+</tr>
+<tr>
+<td><input type="checkbox" name="liangpi" value="1">陕西凉皮 <input type="radio" name="liangpiladu" value="1">小辣
+<input type="radio" name="liangpiladu" value="2">中辣 <input type="radio" name="liangpiladu" value="3">超级无敌变态辣 </td>
+<td><input type="checkbox" name="mifen" value="1">桂林米粉 <input type="radio" name="mifenladu" value="1">小辣
+<input type="radio" name="mifenladu" value="2">中辣 <input type="radio" name="mifenladu" value="3">超级无敌变态辣</td>
+<td><input type="checkbox" name="koushuiji" value="1">秘制口水鸡 <input type="radio" name="koushuijiladu" value="1">小辣
+<input type="radio" name="koushuijiladu" value="2">中辣 <input type="radio" name="koushuijiladu" value="3">超级无敌变态辣</td>
+<td align="center"><input type="checkbox" name="roujiamo" value="1">香香肉夹馍 <input type="radio" name="roujiamozhonglei" value="1">卤肉
+<input type="radio" name="roujiamozhonglei" value="2">牛肉</td>
+</tr>
+<tr>
+<td align="center">7.99$</td>
+<td align="center">9.99$</td>
+<td align="center">6.99$</td>
+<td align="center">3.99$</td>
+</tr>
+</table>
+<div style="text-align:center"><button type="button" data-external="true" class="button" style="padding:30px;margin:20px" onclick="MaiDan();">结账</button>
+<a href="2.html">
+    <button type="button" id="btn" data-external="true" class="button" style="padding:30px;margin:20px" >下单</button>
+</a></div></br>
+<div id="jieguo" align="center">Olivia</div>
+</body>
 </html>
 
