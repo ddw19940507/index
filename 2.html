@@ -1,42 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<script src="https://app.ohmnilabs.com/api/Ohmni-standalone.js"></script>
-</head>  
-<img id="ttt" src="https://cdn10.bigcommerce.com/s-npe4l/products/1157/images/1335/B-MZ-SMSHD---HIGH__85441.1477602947.1280.1280.jpg" alt="Smiley face" width="1280" height="1000" >
-<script> 
-  function SpeakAndAction(firstsentence,secondsentence,xs){
-                       
-                          if (xs%2==0 || xs==0) {
-                           Ohmni.move(500, -500, 1000);
-                            }
-                           else{
-                            Ohmni.move(-500, 500, 1000);  
-                              }
-                           Ohmni.setSpeechLanguage("zh-TW"); 
-                           Ohmni.say(firstsentence);
-                           Ohmni.setSpeechLanguage("en-US");
-                           Ohmni.say(secondsentence);
-                           Ohmni.setNeckTorqueEnabled(1);
-                           if (xs%2==0 || xs==0) {
-                            Ohmni.setNeckPosition(650, 100);
-                           }
-                           else{ 
-                             Ohmni.setNeckPosition(350, 100);
-                               }
-    
- 
-  }                     
-  </script>
-  <script> 
-   var storych =["大家好我是今天的主持人川普", "我要让美国再次强大起来","哈哈哈哈哈"]; 
-   var storyen =["I am Donald Trump","make america great again","lol"];  
-   var x=0;
-    for (i = 0 ; i < storych.length; i++) {
-         setDelay(i);
-     }
-function setDelay(v) {
-  setTimeout(function(){SpeakAndAction(storych[v],storyen[v],v);}, 6000*i); 
-   }
- </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>看看你个SD点了啥</title>
+     <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/jquery.params.js"></script>
+    <script> $(function(){
+           getData1();
+        });
+
+
+        function getData1(){
+            var jieguo = $.query.get("jieguo");
+           
+
+            $("#jieguo").text(jieguo);
+           
+        }
+</script>
+</head>
+<body>
+wulalawulalawulalawulala
+<div id="jieguo">aaaaaaaaa</div>
+</body>
 </html>
